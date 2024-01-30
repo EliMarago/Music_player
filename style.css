@@ -1,0 +1,139 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+*::before, *::after{
+    padding: 0;
+    margin: 0;
+}
+body
+{
+    display: flex;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+background-color: rgb(198, 198, 198);
+}
+.wrapper{
+    width: 395px;
+    background:rgb(234, 232, 232);
+    box-shadow: 0px 6px 15px rgb(160, 158, 158);
+    padding: 50px 35px;
+    border-radius: 6%;
+}
+.wrapper i {
+    cursor: pointer;
+}
+.top-bar, .progress-area .timer,.controls
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    justify-content: space-between;
+}
+.top-bar i{
+    font-size: 30px;
+    color: rgb(84, 82, 82);
+}
+.top-bar span{
+    font-size: 18px;
+    color: rgb(84, 82, 82);
+}
+
+.img-area
+{
+    height: 296px;
+    width: 100%;
+    border: solid 2px rgb(192, 189, 184);
+    border-radius: 9%;
+    box-shadow: 4px 2px 6px rgb(193, 189, 189);
+    overflow: hidden;
+    margin-top: 25px;
+}
+.img-area img{
+height: 100%;
+width: 100%;
+object-fit: cover;
+
+}
+
+.song-details
+{
+    text-align: center;
+    margin: 15px 0px;
+}
+.song-details .name
+{
+font-size: 23px;
+}
+.song-details .artist
+{
+    font-size: 17px;
+    opacity: 0.9px;
+}
+.progress-area
+{
+    height: 6px;
+    width: 100%;
+    background-color: rgb(163, 160, 155);
+    border-radius: 50px;
+    cursor: pointer;
+}
+.progress-area .progress-bar{
+    height: inherit;
+    width: 50%;
+    border-radius: inherit;
+    position: relative;
+    background: rgba(66, 70, 66, 0.958)
+}
+.progress-bar::before
+{
+  content: " ";
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  background:black;
+  border-radius: inherit;
+  top: 50%;
+  right: -5px;
+  transform: translateY(-50%);
+  background: inherit;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.progress-area:hover .progress-bar::before
+{
+    opacity: 1;
+}
+.progress-area .timer{
+ margin-top:4px;
+}
+.timer span{
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.866);
+}
+.controls
+{ 
+    margin: 40px 0px 5px 0;
+
+}
+.controls i{
+    font-size: 40px;
+    user-select: none;  
+
+}
+.controls #play
+{
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgb(200, 193, 193);
+    width: 70px;
+    border: rgb(119, 117, 117) solid 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
